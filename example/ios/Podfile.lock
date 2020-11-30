@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - reminders (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - reminders (from `.symlinks/plugins/reminders/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  reminders:
+    :path: ".symlinks/plugins/reminders/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  reminders: a0ccecc6c93243b2301b67bcc6f520eea6b07660
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0

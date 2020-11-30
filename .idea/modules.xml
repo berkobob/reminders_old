@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/reminders.iml" filepath="$PROJECT_DIR$/reminders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/reminders_android.iml" filepath="$PROJECT_DIR$/android/reminders_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/reminders_example_android.iml" filepath="$PROJECT_DIR$/example/android/reminders_example_android.iml" />
+    </modules>
+  </component>
+</project>
