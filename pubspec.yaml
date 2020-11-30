@@ -1,6 +1,6 @@
 name: reminders
-description: Get reminders from Apple Reminders
-version: 0.0.1
+description: This dart package gives access to ios reminders. Reminders are sorted into lists with one list being the default. This package gives read and delete access.
+version: 0.0.2
 homepage: https://github.com/berkobob/Reminders
 
 environment:

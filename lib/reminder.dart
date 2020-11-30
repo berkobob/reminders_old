@@ -1,3 +1,5 @@
+/// The Reminder class represents an ios Reminder
+/// A reminder can be generated using a standard constructor or from JSON
 class Reminder {
   String id;
   String title;

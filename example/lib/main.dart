@@ -27,7 +27,6 @@ class _MyAppState extends State<MyApp> {
     bool access = await Reminders.hasAccess;
     String defaultList = await Reminders.defaultList;
     List<dynamic> allLists = await Reminders.allLists;
-    // List<Reminder> reminders = await Reminders.getReminders(defaultList);
 
     if (mounted)
       setState(() {
@@ -82,18 +81,16 @@ class _MyAppState extends State<MyApp> {
                     print(dataSnapshot.error);
                     return Text(dataSnapshot.error);
                   }
-                  // return (ReminderWidget());
                   return ListView.builder(
-                      itemCount: dataSnapshot.data.length,
-                      itemBuilder: (context, index) => Dismissible(
-                          onDismissed: (direction) => setState(() {
-                                Reminders.deleteReminder(
-                                    dataSnapshot.data[index].id);
-                                // print(
-                                //     "${dataSnapshot.data[index].id} dismissed");
-                              }),
-                          key: Key(dataSnapshot.data[index].title),
-                          child: ReminderWidget(dataSnapshot.data[index])));
+                    itemCount: dataSnapshot.data.length,
+                    itemBuilder: (context, index) => Dismissible(
+                      onDismissed: (direction) => setState(() {
+                        Reminders.deleteReminder(dataSnapshot.data[index].id);
+                      }),
+                      key: Key(dataSnapshot.data[index].title),
+                      child: ReminderWidget(dataSnapshot.data[index]),
+                    ),
+                  );
                 }),
           ),
         ]),
@@ -123,8 +120,6 @@ class ReminderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var Widget subtitle = Column*()
-
     return ListTile(
       leading: _priorityIcon(reminder.priority),
       title: Text(reminder.title),

@@ -20,6 +20,10 @@ Add the following key/value pair to your Info.plist
 > `<string>INSERT_REASON_HERE</string>`
 > 
 
+### Android integration
+
+There are a number of established packages which give access to Android calendars which include reminders. This app does not provide any Android support. 
+
 ## Possible features to be developed
 
 I'm willing to add more functionality if needed. For example:
