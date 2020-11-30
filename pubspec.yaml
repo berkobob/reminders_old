@@ -1,8 +1,7 @@
 name: reminders
 description: Get reminders from Apple Reminders
 version: 0.0.1
-author: Berko Bob
-homepage: www.babblevoice.com
+homepage: https://github.com/berkobob/Reminders
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

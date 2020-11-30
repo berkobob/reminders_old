@@ -1,3 +1,7 @@
-## 0.0.1
+## 0.0.1 2020-11-30
 
-* TODO: Describe initial release.
+* Initial release
+* Get default reminder list
+* Get list of reminder list names
+* Get reminders in a list by list name
+* Delete a reminder by ID
