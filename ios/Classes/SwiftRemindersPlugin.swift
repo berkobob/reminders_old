@@ -19,12 +19,12 @@ public class SwiftRemindersPlugin: NSObject, FlutterPlugin {
                 result(self.reminders.hasAccess)
             }
 
-        case "getDefaultList":
+        case "defaultList":
             DispatchQueue.main.async {
                 result(self.reminders.defaultList?.title)
             }   
 
-        case "getAllLists":
+        case "lists":
             DispatchQueue.main.async {
                 result(self.reminders.allLists())
             }
@@ -38,7 +38,7 @@ public class SwiftRemindersPlugin: NSObject, FlutterPlugin {
                 }       
             }
 
-        case "deleteReminder":
+        case "deleteReminderWithId":
             if let args = call.arguments as? [String: String] {
                 if let id = args["reminder"] {
                     reminders.deleteReminder(id)

@@ -15,7 +15,7 @@ This is the only functionality I need for my app:
 
 Add the following key/value pair to your Info.plist
 >
-> `<key>NSCalendarsUsageDescription</key>`
+> `<key>NSRemindersUsageDescription</key>`
 > 
 > `<string>INSERT_REASON_HERE</string>`
 > 

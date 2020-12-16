@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Reminders reminders = Reminders();
   List<dynamic> _allLists = [];
   String _active;
   bool _access = false;
@@ -24,9 +25,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> getLists() async {
-    bool access = await Reminders.hasAccess;
-    String defaultList = await Reminders.defaultList;
-    List<dynamic> allLists = await Reminders.allLists;
+    bool access = await reminders.hasAccess;
+    String defaultList = await reminders.defaultList;
+    List<dynamic> allLists = await reminders.lists;
 
     if (mounted)
       setState(() {
@@ -72,7 +73,7 @@ class _MyAppState extends State<MyApp> {
           Flexible(
             fit: FlexFit.tight,
             child: FutureBuilder(
-                future: Reminders.getReminders(_active),
+                future: reminders.getReminders(_active),
                 builder: (context, dataSnapshot) {
                   if (dataSnapshot.connectionState == ConnectionState.waiting)
                     return Center(child: CircularProgressIndicator());
@@ -85,7 +86,8 @@ class _MyAppState extends State<MyApp> {
                     itemCount: dataSnapshot.data.length,
                     itemBuilder: (context, index) => Dismissible(
                       onDismissed: (direction) => setState(() {
-                        Reminders.deleteReminder(dataSnapshot.data[index].id);
+                        reminders
+                            .deleteReminderWithId(dataSnapshot.data[index].id);
                       }),
                       key: Key(dataSnapshot.data[index].title),
                       child: ReminderWidget(dataSnapshot.data[index]),
